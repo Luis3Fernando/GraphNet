@@ -63,11 +63,7 @@ function Process2() {
         const startIdx = startNode.id - 1;
         const endIdx = endNode.id - 1;
 
-        console.log(startIdx);
-        console.log(endIdx);
-
         const shortestPath: number[] = dijkstra(nodes.length, matrix, startIdx, endIdx);
-        console.log("Ruta más corta de Dijkstra:", shortestPath);
 
         const nodes_short: Node[] = [];
         shortestPath.forEach((index) => {

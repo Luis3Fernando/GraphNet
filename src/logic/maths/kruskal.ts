@@ -40,7 +40,7 @@ function convertMatrixToEdges(matrix: number[][]): Edge[] {
   const size = matrix.length;
 
   for (let i = 0; i < size; i++) {
-    for (let j = i + 1; j < size; j++) { // Asegura que no se dupliquen los bordes
+    for (let j = i + 1; j < size; j++) { 
       if (matrix[i][j] !== 0) {
         edges.push([i, j, matrix[i][j]]);
       }
@@ -52,7 +52,7 @@ function convertMatrixToEdges(matrix: number[][]): Edge[] {
 
 export function kruskal(n: number, matrix: number[][]): StepMatrix {
   const edges = convertMatrixToEdges(matrix);
-  edges.sort((a, b) => a[2] - b[2]); // Ordenar por peso
+  edges.sort((a, b) => a[2] - b[2]);
   const dsu = new DisjointSet(n);
   const mst: Edge[] = [];
   const finalMatrix: StepMatrix = Array.from({ length: n }, () => new Array(n).fill(0));
