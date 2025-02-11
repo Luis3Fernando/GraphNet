@@ -7,13 +7,13 @@ import LineTo from 'react-lineto';
 import toast, { Toaster } from 'react-hot-toast';
 import { useAlgorithm } from "../../context/Context";
 import { useNavigate } from "react-router-dom";
-import {Node, Arco} from '../../models/types';
+import { Node, Arco } from '../../models/types';
 
 const notify_error = (text: string) => toast.error(text);
 const notify_succes = (text: string) => toast.success(text);
 
 function AlgorithmKruskal() {
-    const { setMatrix , setNodesC, setLinesC} = useAlgorithm();
+    const { setMatrix, setNodesC, setLinesC } = useAlgorithm();
     const constraintsRef = useRef<HTMLDivElement>(null);
     const [startNode, setStartNode] = useState<Node | null>(null);
     const [endNode, setEndNode] = useState<Node | null>(null);
@@ -34,7 +34,7 @@ function AlgorithmKruskal() {
         lines.forEach((arco) => {
             const fromIndex = nodes.findIndex((node) => node.id === arco.from.id);
             const toIndex = nodes.findIndex((node) => node.id === arco.to.id);
-    
+
             if (fromIndex !== -1 && toIndex !== -1) {
                 matrix[fromIndex][toIndex] = arco.weight;
                 matrix[toIndex][fromIndex] = arco.weight;
@@ -80,22 +80,22 @@ function AlgorithmKruskal() {
             return;
         }
 
-        if (!weight && weight>=0) {
+        if (!weight && weight >= 0) {
             notify_error("Necesitas un peso del arco válido.");
             return;
         }
 
         const isDuplicate = lines.some(
             (arco) =>
-                (arco.from.id === startNode.id && arco.to.id === endNode.id) || 
+                (arco.from.id === startNode.id && arco.to.id === endNode.id) ||
                 (arco.from.id === endNode.id && arco.to.id === startNode.id)
         );
-    
+
         if (isDuplicate) {
             notify_error("Ya existe un arco entre estos dos nodos.");
             return;
         }
-    
+
 
         const newArco: Arco = {
             id: lines.length + 1,
@@ -107,13 +107,13 @@ function AlgorithmKruskal() {
         setLines([...lines, newArco]);
     };
 
-    const clear = () =>{
+    const clear = () => {
         setNodes([]);
         setLines([]);
         notify_succes("Lienzo limpiado");
     }
 
-    const solver = ()=>{
+    const solver = () => {
         generateAdjacencyMatrix();
         navigate("/process");
     }
@@ -245,7 +245,7 @@ function AlgorithmKruskal() {
                             dragConstraints={constraintsRef}
                             dragElastic={0.2}
                             style={box}
-                            onDrag={(event, info) => {
+                            onDrag={(_, info) => {
                                 const updatedNodes = nodes.map((n) =>
                                     n.id === node.id ? { ...n, x: info.point.x, y: info.point.y } : n
                                 );

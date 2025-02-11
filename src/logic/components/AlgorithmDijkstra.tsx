@@ -245,7 +245,7 @@ function AlgorithmKruskal() {
                             dragConstraints={constraintsRef}
                             dragElastic={0.2}
                             style={box}
-                            onDrag={(event, info) => {
+                            onDrag={(_, info) => {
                                 const updatedNodes = nodes.map((n) =>
                                     n.id === node.id ? { ...n, x: info.point.x, y: info.point.y } : n
                                 );
