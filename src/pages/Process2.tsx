@@ -216,7 +216,7 @@ function Process2() {
                             dragConstraints={constraintsRef}
                             dragElastic={0.2}
                             style={{ ...box, left: node.x, top: node.y, position: "absolute" }}
-                            onDrag={(event, info) => {
+                            onDrag={(_, info) => {
                                 const updatedNodes = nodes.map((n) =>
                                     n.id === node.id ? { ...n, x: info.point.x, y: info.point.y } : n
                                 );
