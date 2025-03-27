@@ -2,7 +2,7 @@
 
 <img src="src/assets/icon/logo.png" alt="LOGO" width="50"/>
 
-![Version](https://img.shields.io/badge/version-1.0.0-purple) ![Language]([https://img.shields.io/badge/language-Java-purple](https://img.shields.io/badge/language-Typescript-purple)) ![Status](https://img.shields.io/badge/status-first%20version-purple)
+![Version](https://img.shields.io/badge/version-1.0.0-purple) ![Language](https://img.shields.io/badge/language-Typescript-purple) ![Status](https://img.shields.io/badge/status-first%20version-purple)
 ![Stars](https://img.shields.io/github/stars/Luis3Fernando/GraphNet?style=social)
 
 
@@ -21,7 +21,7 @@ Download the project and compile it with the IDE mentioned above, or use the exe
 
 
 ```sh
-git clone [https://github.com/Luis3Fernando/Snake](https://github.com/Luis3Fernando/GraphNet)
+git clone https://github.com/Luis3Fernando/GraphNet
 ```
 
 ## Live Demo
