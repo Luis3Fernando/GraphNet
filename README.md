@@ -1,50 +1,34 @@
-# React + TypeScript + Vite
+## SNAKE
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="src/assets/icon/logo.png" alt="LOGO" width="50"/>
 
-Currently, two official plugins are available:
+![Version](https://img.shields.io/badge/version-1.0.0-purple) ![Language](https://img.shields.io/badge/language-Typescript-purple) ![Status](https://img.shields.io/badge/status-first%20version-purple)
+![Stars](https://img.shields.io/github/stars/Luis3Fernando/GraphNet?style=social)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+GraphNet is a visual graph calculator that allows users to create, edit, and analyze graphs interactively. It includes various graph algorithms, although currently, only two have been implemented. The project aims to provide an intuitive and educational tool for understanding graph theory.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## Technologies
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+GraphNet uses the following open-source technologies:
+
+- **React with TypeScript** - The front-end framework used to build the interactive graph calculator.
+
+## Installation
+
+Download the project and compile it with the IDE mentioned above, or use the executable.
+
+
+```sh
+git clone https://github.com/Luis3Fernando/GraphNet
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Live Demo
+You can try GraphNet online at the following link:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+https://graphnet.sysari.net/
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Explore graph algorithms interactively and visualize their behavior in real-time!
+
+
