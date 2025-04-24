@@ -41,7 +41,7 @@ Download the project and compile it with the IDE mentioned above, or use the exe
 ```sh
 git clone https://github.com/Luis3Fernando/GraphNet
 
-cd Grpahnet
+cd Graphnet
 
 npm install
 
