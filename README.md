@@ -38,13 +38,19 @@ GraphNet uses the following open-source technologies:
 Download the project and compile it with the IDE mentioned above, or use the executable.
 
 
-```sh
+```bash
 git clone https://github.com/Luis3Fernando/GraphNet
+```
 
+```bash
 cd Graphnet
+```
 
+```bash
 npm install
+```
 
+```bash
 npm run dev
 
 ```
